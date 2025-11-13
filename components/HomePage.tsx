@@ -2,6 +2,7 @@ import Link from 'next/link'
 import TextType from './TextType'
 import Testimonials from './Testimonials'
 import { ShuffleHero } from './ui/shuffle-grid'
+import FAQ from './FAQ'
 
 export default function HomePage() {
   return (
@@ -323,35 +324,7 @@ export default function HomePage() {
       <Testimonials />
 
       {/* 11. FAQ */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="heading-secondary mb-6">Frequently Asked Questions</h2>
-          </div>
-
-          <div className="max-w-3xl mx-auto space-y-6">
-            {[
-              {
-                question: 'Do I need to pay anything to join?',
-                answer: 'No. Membership is completely free. We do not charge fees or require financial commitments.',
-              },
-              {
-                question: 'What types of projects can I contribute to?',
-                answer: 'You can participate in community-owned initiatives, member-led in-house projects, or collaborations with trusted partners.',
-              },
-              {
-                question: 'How do I know if this community is right for me?',
-                answer: 'If you value ethical collaboration, transparency, and meaningful work without financial pressure, you\'ll feel at home here.',
-              },
-            ].map((faq, index) => (
-              <div key={index} className="card">
-                <h3 className="heading-tertiary mb-3">{faq.question}</h3>
-                <p className="text-gray-700">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FAQ />
 
       {/* 12. Final Call-to-Action Section */}
       <section className="section-padding bg-gradient-to-br from-secondary-50 to-white">
