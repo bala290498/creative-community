@@ -2,20 +2,17 @@ import Link from 'next/link'
 import { Sprout, Lightbulb, Handshake, Check, ArrowRight } from 'lucide-react'
 import { AvatarCircles } from '@/components/ui/avatar-circles'
 
-// Indian young, positive, smiling avatars from Unsplash
-// Using specific photos that feature Indian people
-const avatarUrls = [
-  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces&auto=format",
-  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=faces&auto=format",
-  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=faces&auto=format",
-  "https://images.unsplash.com/photo-1580489944761-15a19d654d0b?w=200&h=200&fit=crop&crop=faces&auto=format",
-  "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=200&h=200&fit=crop&crop=faces&auto=format",
-  "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=200&h=200&fit=crop&crop=faces&auto=format",
-  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces&auto=format",
-  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=faces&auto=format",
-  "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=faces&auto=format",
-  "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=200&h=200&fit=crop&crop=faces&auto=format",
+// 3D Avatar pack - using Ready Player Me style 3D avatars
+// Generating diverse 3D avatars with Indian names
+const indianNames = [
+  "Priya", "Arjun", "Kavya", "Rohan", "Ananya",
+  "Vikram", "Meera", "Aditya", "Sneha", "Rahul"
 ]
+
+// Using Multiavatar for 3D-style avatars (provides 3D-looking avatar images)
+const avatarUrls = indianNames.map((name) => 
+  `https://api.multiavatar.com/${encodeURIComponent(name)}.png?apikey=`
+)
 
 export default function Community() {
   return (
