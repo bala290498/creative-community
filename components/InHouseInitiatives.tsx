@@ -1,6 +1,9 @@
+import ProjectsList from './ProjectsList'
+
 export default function InHouseInitiatives() {
   return (
-    <section className="section-padding bg-gray-50">
+    <>
+      <section className="section-padding bg-gray-50">
       <div className="container-custom">
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
@@ -64,6 +67,8 @@ export default function InHouseInitiatives() {
         </div>
       </div>
     </section>
+    <ProjectsList type="in-house" title="In-House Initiatives" />
+    </>
   )
 }
 

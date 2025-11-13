@@ -1,6 +1,9 @@
+import ProjectsList from './ProjectsList'
+
 export default function TrustedPartners() {
   return (
-    <section className="section-padding bg-white">
+    <>
+      <section className="section-padding bg-white">
       <div className="container-custom">
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
@@ -55,6 +58,8 @@ export default function TrustedPartners() {
         </div>
       </div>
     </section>
+    <ProjectsList type="trusted-partner" title="Trusted Partner Projects" />
+    </>
   )
 }
 
