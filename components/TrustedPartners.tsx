@@ -1,4 +1,5 @@
 import ProjectsList from './ProjectsList'
+import { Sparkles, Check } from 'lucide-react'
 
 export default function TrustedPartners() {
   return (
@@ -8,7 +9,7 @@ export default function TrustedPartners() {
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
             <span className="text-secondary-600 font-semibold text-sm md:text-base uppercase tracking-wider">
-              ⭐ Trusted Partners
+              Trusted Partners
             </span>
           </div>
           <h2 className="heading-secondary">Collaborations Beyond Our Community</h2>
@@ -29,7 +30,7 @@ export default function TrustedPartners() {
                 'Exclusive partner access',
               ].map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
-                  <span className="text-secondary-600 font-bold text-xl mt-1">✨</span>
+                  <Sparkles className="w-5 h-5 text-secondary-600 mt-1 flex-shrink-0" />
                   <span className="text-lg text-gray-700">{item}</span>
                 </li>
               ))}
@@ -49,7 +50,7 @@ export default function TrustedPartners() {
                 'Safe, curated, value-based opportunities',
               ].map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
-                  <span className="text-secondary-600 font-bold text-xl mt-1">✓</span>
+                  <Check className="w-5 h-5 text-secondary-600 mt-1 flex-shrink-0" />
                   <span className="text-lg text-gray-700">{item}</span>
                 </li>
               ))}

@@ -3,6 +3,7 @@ import TextType from './TextType'
 import Testimonials from './Testimonials'
 import { ShuffleHero } from './ui/shuffle-grid'
 import FAQ from './FAQ'
+import { Search, Handshake, Sparkles, FileText, Check } from 'lucide-react'
 
 export default function HomePage() {
   return (
@@ -63,25 +64,32 @@ export default function HomePage() {
               {
                 title: 'Transparency',
                 description: 'We communicate openly and operate with honesty so every member understands how the community works.',
-                icon: '🔍',
+                icon: Search,
               },
               {
                 title: 'Ethical Collaboration',
                 description: 'Members join and contribute voluntarily—no fees, no forced commitments, no profit-driven motives.',
-                icon: '🤝',
+                icon: Handshake,
               },
               {
                 title: 'Meaningful Impact',
                 description: 'Projects are chosen because they matter. Members support ideas that solve real problems and uplift communities.',
-                icon: '💫',
+                icon: Sparkles,
               },
-            ].map((item, index) => (
-              <div key={index} className="card text-center">
-                <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="heading-tertiary mb-4">{item.title}</h3>
-                <p className="text-gray-700">{item.description}</p>
-              </div>
-            ))}
+            ].map((item, index) => {
+              const IconComponent = item.icon
+              return (
+                <div key={index} className="card text-center">
+                  <div className="flex justify-center mb-4">
+                    <div className="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center">
+                      <IconComponent className="w-8 h-8 text-secondary-600" />
+                    </div>
+                  </div>
+                  <h3 className="heading-tertiary mb-4">{item.title}</h3>
+                  <p className="text-gray-700">{item.description}</p>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -99,21 +107,23 @@ export default function HomePage() {
                 step: 'Step 1',
                 title: 'Discover Projects',
                 description: 'Browse initiatives across community-owned, in-house, and trusted partner categories.',
-                icon: '🔎',
+                icon: Search,
               },
               {
                 step: 'Step 2',
                 title: 'Apply for Membership',
                 description: 'Submit a simple application to join the community and gain access to opportunities.',
-                icon: '📝',
+                icon: FileText,
               },
               {
                 step: 'Step 3',
                 title: 'Contribute Voluntarily',
                 description: 'Choose the projects you care about and contribute in a way that fits your skills, passions, and availability.',
-                icon: '✨',
+                icon: Sparkles,
               },
-            ].map((item, index) => (
+            ].map((item, index) => {
+              const IconComponent = item.icon
+              return (
               <div key={index} className="card">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
@@ -130,7 +140,8 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
@@ -208,7 +219,7 @@ export default function HomePage() {
                 'A supportive space where ideas grow naturally',
               ].map((point, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <span className="text-secondary-600 font-bold text-xl mt-1">✓</span>
+                  <Check className="w-5 h-5 text-secondary-600 mt-1 flex-shrink-0" />
                   <p className="text-lg text-gray-700">{point}</p>
                 </div>
               ))}

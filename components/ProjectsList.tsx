@@ -121,7 +121,7 @@ export default function ProjectsList({ type, title }: ProjectsListProps) {
         <div className="text-center mb-12">
           <div className="inline-block mb-4">
             <span className="text-secondary-600 font-semibold text-sm md:text-base uppercase tracking-wider">
-              ⭐ {title}
+              {title}
             </span>
           </div>
           <h2 className="heading-secondary">Member-Driven Projects</h2>

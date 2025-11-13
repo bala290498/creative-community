@@ -1,4 +1,5 @@
 import ProjectsList from './ProjectsList'
+import { Gift, Circle } from 'lucide-react'
 
 export default function InHouseInitiatives() {
   return (
@@ -8,7 +9,7 @@ export default function InHouseInitiatives() {
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
             <span className="text-secondary-600 font-semibold text-sm md:text-base uppercase tracking-wider">
-              ⭐ In-House Initiatives
+              In-House Initiatives
             </span>
           </div>
           <h2 className="heading-secondary">Member-Driven Projects</h2>
@@ -28,7 +29,7 @@ export default function InHouseInitiatives() {
                 'Optional for members to support',
               ].map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
-                  <span className="text-secondary-600 font-bold mt-1">•</span>
+                  <Circle className="w-2 h-2 text-secondary-600 mt-2 flex-shrink-0 fill-current" />
                   <span className="text-gray-700">{item}</span>
                 </li>
               ))}
@@ -50,7 +51,7 @@ export default function InHouseInitiatives() {
                 'Recognition for their contribution',
               ].map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
-                  <span className="text-secondary-600 font-bold mt-1">🎁</span>
+                  <Gift className="w-5 h-5 text-secondary-600 mt-1 flex-shrink-0" />
                   <span className="text-gray-700">{item}</span>
                 </li>
               ))}

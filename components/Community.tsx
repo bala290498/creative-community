@@ -1,20 +1,72 @@
 import Link from 'next/link'
+import { Sprout, Lightbulb, Handshake, Check, ArrowRight } from 'lucide-react'
+import { AvatarCircles } from '@/components/ui/avatar-circles'
+
+// Indian young, positive, smiling avatars from Unsplash
+// Using specific photos that feature Indian people
+const avatarUrls = [
+  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces&auto=format",
+  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=faces&auto=format",
+  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=faces&auto=format",
+  "https://images.unsplash.com/photo-1580489944761-15a19d654d0b?w=200&h=200&fit=crop&crop=faces&auto=format",
+  "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=200&h=200&fit=crop&crop=faces&auto=format",
+  "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=200&h=200&fit=crop&crop=faces&auto=format",
+  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces&auto=format",
+  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=faces&auto=format",
+  "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=faces&auto=format",
+  "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=200&h=200&fit=crop&crop=faces&auto=format",
+]
 
 export default function Community() {
   return (
-    <section className="section-padding bg-white">
-      <div className="container-custom">
-        <div className="text-center mb-16">
-          <div className="inline-block mb-4">
-            <span className="text-secondary-600 font-semibold text-sm md:text-base uppercase tracking-wider">
-              ⭐ Community
-            </span>
+    <>
+      {/* Hero Section with Avatar Circles */}
+      <section className="relative pt-24 md:pt-32 pb-16 md:pb-24 bg-gradient-to-br from-secondary-50 via-white to-secondary-50">
+        <div className="container-custom">
+          <div className="text-center max-w-4xl mx-auto animate-fade-in">
+            <div className="inline-block mb-6">
+              <span className="text-secondary-600 font-semibold text-sm md:text-base uppercase tracking-wider">
+                Community
+              </span>
+            </div>
+            
+            <h1 className="heading-primary text-gray-900 mb-6">
+              Join Our Growing Community
+            </h1>
+            
+            <p className="text-body text-gray-700 mb-8 max-w-3xl mx-auto text-lg">
+              A vibrant, voluntary community where individuals come together to grow, collaborate, and support meaningful projects.
+            </p>
+
+            {/* Avatar Circles */}
+            <div className="flex flex-col items-center gap-4 mb-8">
+              <AvatarCircles numPeople={99} avatarUrls={avatarUrls} />
+              <p className="text-sm md:text-base text-gray-600 font-medium">
+                Join <span className="text-secondary-600 font-semibold">99+</span> active members building meaningful projects together
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/membership" className="btn-primary">
+                Join the Community
+              </Link>
+              <Link href="/about" className="btn-secondary">
+                Learn More
+              </Link>
+            </div>
           </div>
-          <h2 className="heading-secondary">Our Community</h2>
-          <p className="text-body text-gray-600 max-w-3xl mx-auto mt-4">
-            A vibrant, voluntary community where individuals come together to grow, collaborate, and support meaningful projects.
-          </p>
         </div>
+      </section>
+
+      {/* Main Content Section */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <h2 className="heading-secondary">Our Community</h2>
+            <p className="text-body text-gray-600 max-w-3xl mx-auto mt-4">
+              Discover what makes our community special and how you can get involved.
+            </p>
+          </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
           {/* Community Values */}
@@ -29,7 +81,7 @@ export default function Community() {
                 'Focus on meaningful impact',
               ].map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
-                  <span className="text-secondary-600 font-bold text-xl mt-1">✓</span>
+                  <Check className="w-5 h-5 text-secondary-600 mt-1 flex-shrink-0" />
                   <span className="text-lg text-gray-700">{item}</span>
                 </li>
               ))}
@@ -48,7 +100,7 @@ export default function Community() {
                 'Participate in community discussions',
               ].map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
-                  <span className="text-secondary-600 font-bold text-xl mt-1">→</span>
+                  <ArrowRight className="w-5 h-5 text-secondary-600 mt-1 flex-shrink-0" />
                   <span className="text-lg text-gray-700">{item}</span>
                 </li>
               ))}
@@ -60,7 +112,11 @@ export default function Community() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <Link href="/community-owned" className="group">
             <div className="card h-full hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="text-4xl mb-4">🌱</div>
+              <div className="mb-4">
+                <div className="w-16 h-16 bg-secondary-100 rounded-lg flex items-center justify-center">
+                  <Sprout className="w-8 h-8 text-secondary-600" />
+                </div>
+              </div>
               <h3 className="heading-tertiary mb-4 group-hover:text-secondary-600 transition-colors">
                 Community-Owned
               </h3>
@@ -72,7 +128,11 @@ export default function Community() {
 
           <Link href="/initiatives" className="group">
             <div className="card h-full hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="text-4xl mb-4">💡</div>
+              <div className="mb-4">
+                <div className="w-16 h-16 bg-secondary-100 rounded-lg flex items-center justify-center">
+                  <Lightbulb className="w-8 h-8 text-secondary-600" />
+                </div>
+              </div>
               <h3 className="heading-tertiary mb-4 group-hover:text-secondary-600 transition-colors">
                 In-House Initiatives
               </h3>
@@ -84,7 +144,11 @@ export default function Community() {
 
           <Link href="/partners" className="group">
             <div className="card h-full hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="text-4xl mb-4">🤝</div>
+              <div className="mb-4">
+                <div className="w-16 h-16 bg-secondary-100 rounded-lg flex items-center justify-center">
+                  <Handshake className="w-8 h-8 text-secondary-600" />
+                </div>
+              </div>
               <h3 className="heading-tertiary mb-4 group-hover:text-secondary-600 transition-colors">
                 Trusted Partners
               </h3>
@@ -109,6 +173,7 @@ export default function Community() {
         </div>
       </div>
     </section>
+    </>
   )
 }
 

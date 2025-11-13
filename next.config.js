@@ -15,6 +15,14 @@ const nextConfig = {
         protocol: 'https',
         hostname: '**.freepik.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'api.dicebear.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'ui-avatars.com',
+      },
     ],
   },
 }

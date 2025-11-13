@@ -1,4 +1,5 @@
 import ProjectsList from './ProjectsList'
+import { Check, ArrowRight } from 'lucide-react'
 
 export default function CommunityOwned() {
   return (
@@ -8,7 +9,7 @@ export default function CommunityOwned() {
           <div className="text-center mb-16">
             <div className="inline-block mb-4">
               <span className="text-secondary-600 font-semibold text-sm md:text-base uppercase tracking-wider">
-                ⭐ Community-Owned
+                Community-Owned
               </span>
             </div>
             <h2 className="heading-secondary">
@@ -32,7 +33,7 @@ export default function CommunityOwned() {
                   'Rewards are based solely on involvement and contribution',
                 ].map((item, index) => (
                   <li key={index} className="flex items-start space-x-3">
-                    <span className="text-secondary-600 font-bold text-xl mt-1">✓</span>
+                    <Check className="w-5 h-5 text-secondary-600 mt-1 flex-shrink-0" />
                     <span className="text-lg text-gray-700">{item}</span>
                   </li>
                 ))}
@@ -50,7 +51,7 @@ export default function CommunityOwned() {
                   'Encourages long-term, genuine participation',
                 ].map((item, index) => (
                   <li key={index} className="flex items-start space-x-3">
-                    <span className="text-secondary-600 font-bold text-xl mt-1">→</span>
+                    <ArrowRight className="w-5 h-5 text-secondary-600 mt-1 flex-shrink-0" />
                     <span className="text-lg text-gray-700">{item}</span>
                   </li>
                 ))}

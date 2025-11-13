@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Sparkles, Check } from 'lucide-react'
 
 export default function About() {
   return (
@@ -7,7 +8,7 @@ export default function About() {
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
             <span className="text-secondary-600 font-semibold text-sm md:text-base uppercase tracking-wider">
-              ⭐ About
+              About
             </span>
           </div>
           <h2 className="heading-secondary">Who We Are</h2>
@@ -29,7 +30,7 @@ export default function About() {
                 'Every member deserves respect and recognition',
               ].map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
-                  <span className="text-secondary-600 font-bold text-xl mt-1">💫</span>
+                  <Sparkles className="w-5 h-5 text-secondary-600 mt-1 flex-shrink-0" />
                   <span className="text-lg text-gray-700">{item}</span>
                 </li>
               ))}
@@ -41,31 +42,31 @@ export default function About() {
             <h3 className="heading-tertiary mb-6">Our Promise</h3>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
-                <span className="text-green-600 font-bold text-xl mt-1">✓</span>
+                <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
                 <span className="text-lg text-gray-700">
                   We do not operate as a company
                 </span>
               </li>
               <li className="flex items-start space-x-3">
-                <span className="text-green-600 font-bold text-xl mt-1">✓</span>
+                <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
                 <span className="text-lg text-gray-700">
                   We do not conduct investments or profit-sharing
                 </span>
               </li>
               <li className="flex items-start space-x-3">
-                <span className="text-green-600 font-bold text-xl mt-1">✓</span>
+                <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
                 <span className="text-lg text-gray-700">
                   We do not guarantee financial returns
                 </span>
               </li>
               <li className="flex items-start space-x-3">
-                <span className="text-green-600 font-bold text-xl mt-1">✓</span>
+                <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
                 <span className="text-lg text-gray-700">
                   We provide a safe and supportive community space
                 </span>
               </li>
               <li className="flex items-start space-x-3">
-                <span className="text-green-600 font-bold text-xl mt-1">✓</span>
+                <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
                 <span className="text-lg text-gray-700">
                   We follow strict ethical and community-focused values
                 </span>

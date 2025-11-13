@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Globe, Lightbulb, Gift, Handshake } from 'lucide-react'
 
 export default function Hero() {
   return (
@@ -7,7 +8,7 @@ export default function Hero() {
         <div className="text-center max-w-4xl mx-auto animate-fade-in">
           <div className="inline-block mb-6">
             <span className="text-secondary-600 font-semibold text-sm md:text-base uppercase tracking-wider">
-              ⭐ Welcome
+              Welcome
             </span>
           </div>
           
@@ -38,34 +39,39 @@ export default function Hero() {
             {[
               {
                 title: 'Join a thriving network',
-                icon: '🌐',
+                icon: Globe,
               },
               {
                 title: 'Contribute voluntarily to projects you believe in',
-                icon: '💡',
+                icon: Lightbulb,
               },
               {
                 title: 'Receive recognition, access, and community-driven benefits',
-                icon: '🎁',
+                icon: Gift,
               },
               {
                 title: 'Collaborate with in-house creators and trusted partner businesses',
-                icon: '🤝',
+                icon: Handshake,
               },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="card animate-slide-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-start space-x-4">
-                  <span className="text-3xl">{item.icon}</span>
-                  <p className="text-lg font-medium text-gray-800">
-                    {item.title}
-                  </p>
+            ].map((item, index) => {
+              const IconComponent = item.icon
+              return (
+                <div
+                  key={index}
+                  className="card animate-slide-up"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-secondary-100 rounded-lg flex items-center justify-center">
+                      <IconComponent className="w-6 h-6 text-secondary-600" />
+                    </div>
+                    <p className="text-lg font-medium text-gray-800">
+                      {item.title}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
 
           <div className="mt-12 text-center">
