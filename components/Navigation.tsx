@@ -17,6 +17,7 @@ export default function Navigation() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
+    { href: '/community', label: 'Community' },
     { href: '/community-owned', label: 'Community-Owned' },
     { href: '/initiatives', label: 'In-House Initiatives' },
     { href: '/partners', label: 'Trusted Partners' },
@@ -67,7 +68,7 @@ export default function Navigation() {
             <div className="flex items-center gap-4">
               {navLinks.map((link) => {
                 const shortLabel = link.label === 'In-House Initiatives' ? 'Initiatives' : 
-                                  link.label === 'Community-Owned' ? 'Community' :
+                                  link.label === 'Community-Owned' ? 'Owned' :
                                   link.label === 'Trusted Partners' ? 'Partners' : link.label
                 return (
                   <Link
