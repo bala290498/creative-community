@@ -2,18 +2,18 @@ import Link from 'next/link'
 
 export default function Hero() {
   return (
-    <section className="relative pt-24 md:pt-32 pb-16 md:pb-24 bg-gradient-to-br from-primary-50 via-white to-primary-50">
+    <section className="relative pt-24 md:pt-32 pb-16 md:pb-24 bg-gradient-to-br from-secondary-50 via-white to-secondary-50">
       <div className="container-custom">
         <div className="text-center max-w-4xl mx-auto animate-fade-in">
           <div className="inline-block mb-6">
-            <span className="text-primary-600 font-semibold text-sm md:text-base uppercase tracking-wider">
+            <span className="text-secondary-600 font-semibold text-sm md:text-base uppercase tracking-wider">
               ⭐ Welcome
             </span>
           </div>
           
           <h1 className="heading-primary text-gray-900 mb-6">
             Welcome to{' '}
-            <span className="text-primary-600">Creative-Community</span>
+            <span className="text-secondary-600">Creative-Community</span>
           </h1>
           
           <p className="text-body text-gray-700 mb-8 max-w-3xl mx-auto">
@@ -74,7 +74,7 @@ export default function Hero() {
                 This community is <span className="font-semibold text-gray-900">not a company</span>, not an investment scheme, and not profit-based.
               </p>
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed mt-4">
-                It's a shared space for <span className="font-semibold text-primary-600">learning, contribution, impact, and growth</span>.
+                It&apos;s a shared space for <span className="font-semibold text-secondary-600">learning, contribution, impact, and growth</span>.
               </p>
             </div>
           </div>

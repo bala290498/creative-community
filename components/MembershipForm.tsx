@@ -27,7 +27,14 @@ export default function MembershipForm() {
         body: JSON.stringify(formData),
       })
 
-      const data = await response.json()
+      let data
+      try {
+        data = await response.json()
+      } catch (jsonError) {
+        setIsSubmitting(false)
+        alert('Server returned an invalid response. Please try again.')
+        return
+      }
 
       if (response.ok) {
         setSubmitted(true)
@@ -46,7 +53,7 @@ export default function MembershipForm() {
         }, 3000)
       } else {
         setIsSubmitting(false)
-        alert(data.error || 'Failed to submit application. Please try again.')
+        alert(data?.error || 'Failed to submit application. Please try again.')
       }
     } catch (error) {
       setIsSubmitting(false)
@@ -72,7 +79,7 @@ export default function MembershipForm() {
           Thank You!
         </h3>
         <p className="text-green-700">
-          Your membership application has been submitted. We'll be in touch soon!
+          Your membership application has been submitted. We&apos;ll be in touch soon!
         </p>
       </div>
     )
@@ -98,7 +105,7 @@ export default function MembershipForm() {
             required
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent transition-all"
             placeholder="Your full name"
           />
         </div>
@@ -117,7 +124,7 @@ export default function MembershipForm() {
             required
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent transition-all"
             placeholder="your.email@example.com"
           />
         </div>
@@ -135,7 +142,7 @@ export default function MembershipForm() {
             rows={3}
             value={formData.interests}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent transition-all"
             placeholder="Tell us what draws you to Creative-Community..."
           />
         </div>
@@ -153,7 +160,7 @@ export default function MembershipForm() {
             rows={3}
             value={formData.contribution}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent transition-all"
             placeholder="Skills, time, resources, or ideas you'd like to share..."
           />
         </div>
@@ -171,7 +178,7 @@ export default function MembershipForm() {
             rows={3}
             value={formData.message}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent transition-all"
             placeholder="Anything else you'd like us to know..."
           />
         </div>
@@ -185,7 +192,7 @@ export default function MembershipForm() {
               required
               checked={agreed}
               onChange={(e) => setAgreed(e.target.checked)}
-              className="mt-1 h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
+              className="mt-1 h-4 w-4 text-secondary-600 focus:ring-secondary-500 border-gray-300 rounded"
             />
             <label htmlFor="agreement" className="text-sm text-gray-700">
               <span className="font-semibold">I understand and agree to the following:</span>

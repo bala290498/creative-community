@@ -6,7 +6,7 @@ export default function About() {
       <div className="container-custom">
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <span className="text-primary-600 font-semibold text-sm md:text-base uppercase tracking-wider">
+            <span className="text-secondary-600 font-semibold text-sm md:text-base uppercase tracking-wider">
               ⭐ About
             </span>
           </div>
@@ -29,7 +29,7 @@ export default function About() {
                 'Every member deserves respect and recognition',
               ].map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
-                  <span className="text-primary-600 font-bold text-xl mt-1">💫</span>
+                  <span className="text-secondary-600 font-bold text-xl mt-1">💫</span>
                   <span className="text-lg text-gray-700">{item}</span>
                 </li>
               ))}
@@ -37,7 +37,7 @@ export default function About() {
           </div>
 
           {/* Our Promise */}
-          <div className="card bg-gradient-to-br from-primary-50 to-white">
+          <div className="card bg-gradient-to-br from-secondary-50 to-white">
             <h3 className="heading-tertiary mb-6">Our Promise</h3>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
@@ -76,7 +76,7 @@ export default function About() {
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="inline-block bg-gradient-to-br from-primary-600 to-primary-700 rounded-2xl shadow-xl p-8 md:p-12 text-white max-w-3xl">
+          <div className="inline-block bg-gradient-to-br from-secondary-600 to-secondary-700 rounded-2xl shadow-xl p-8 md:p-12 text-white max-w-3xl">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Ready to Join Us?
             </h3>
@@ -85,7 +85,7 @@ export default function About() {
             </p>
             <Link
               href="/membership"
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-base font-medium rounded-lg text-white bg-transparent hover:bg-white hover:text-primary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-colors duration-200"
+              className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-base font-medium rounded-lg text-white bg-transparent hover:bg-white hover:text-secondary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-colors duration-200"
             >
               Apply for Membership
             </Link>

@@ -4,7 +4,7 @@ export default function InHouseInitiatives() {
       <div className="container-custom">
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <span className="text-primary-600 font-semibold text-sm md:text-base uppercase tracking-wider">
+            <span className="text-secondary-600 font-semibold text-sm md:text-base uppercase tracking-wider">
               ⭐ In-House Initiatives
             </span>
           </div>
@@ -25,7 +25,7 @@ export default function InHouseInitiatives() {
                 'Optional for members to support',
               ].map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
-                  <span className="text-primary-600 font-bold mt-1">•</span>
+                  <span className="text-secondary-600 font-bold mt-1">•</span>
                   <span className="text-gray-700">{item}</span>
                 </li>
               ))}
@@ -33,7 +33,7 @@ export default function InHouseInitiatives() {
           </div>
 
           {/* Member Benefits */}
-          <div className="card bg-gradient-to-br from-primary-50 to-white">
+          <div className="card bg-gradient-to-br from-secondary-50 to-white">
             <h3 className="heading-tertiary mb-4">Member Benefits</h3>
             <p className="text-gray-700 mb-4">
               Members who choose to engage in these projects may get:
@@ -47,7 +47,7 @@ export default function InHouseInitiatives() {
                 'Recognition for their contribution',
               ].map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
-                  <span className="text-primary-600 font-bold mt-1">🎁</span>
+                  <span className="text-secondary-600 font-bold mt-1">🎁</span>
                   <span className="text-gray-700">{item}</span>
                 </li>
               ))}
@@ -58,7 +58,7 @@ export default function InHouseInitiatives() {
         <div className="text-center">
           <div className="inline-block bg-white rounded-xl shadow-lg p-6 md:p-8 border border-gray-100 max-w-2xl">
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-              Participation is always <span className="font-semibold text-primary-600">voluntary</span> and based on personal interest — not mandatory or financial in nature.
+              Participation is always <span className="font-semibold text-secondary-600">voluntary</span> and based on personal interest — not mandatory or financial in nature.
             </p>
           </div>
         </div>

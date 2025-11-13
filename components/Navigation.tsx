@@ -39,7 +39,7 @@ export default function Navigation() {
             href="/" 
             className="flex items-center gap-2.5 md:gap-3 flex-shrink-0 h-full"
           >
-            <div className="w-9 h-9 md:w-10 md:h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center flex-shrink-0">
+            <div className="w-9 h-9 md:w-10 md:h-10 bg-gradient-to-br from-secondary-500 to-secondary-700 rounded-lg flex items-center justify-center flex-shrink-0">
               <span className="text-white font-bold text-base md:text-lg leading-none">CC</span>
             </div>
             <span className="text-base md:text-lg lg:text-xl font-bold text-gray-900 whitespace-nowrap leading-tight">
@@ -54,7 +54,7 @@ export default function Navigation() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm xl:text-base text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 whitespace-nowrap py-2"
+                  className="text-sm xl:text-base text-gray-700 hover:text-secondary-600 font-medium transition-colors duration-200 whitespace-nowrap py-2"
                 >
                   {link.label}
                 </Link>
@@ -73,7 +73,7 @@ export default function Navigation() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="text-sm text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 whitespace-nowrap py-2"
+                    className="text-sm text-gray-700 hover:text-secondary-600 font-medium transition-colors duration-200 whitespace-nowrap py-2"
                   >
                     {shortLabel}
                   </Link>
@@ -114,7 +114,7 @@ export default function Navigation() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200"
+                  className="text-gray-700 hover:text-secondary-600 font-medium transition-colors duration-200"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}

@@ -4,11 +4,11 @@ import MembershipForm from './MembershipForm'
 
 export default function Membership() {
   return (
-    <section className="section-padding bg-gradient-to-br from-primary-50 via-white to-primary-50">
+    <section className="section-padding bg-gradient-to-br from-secondary-50 via-white to-secondary-50">
       <div className="container-custom">
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <span className="text-primary-600 font-semibold text-sm md:text-base uppercase tracking-wider">
+            <span className="text-secondary-600 font-semibold text-sm md:text-base uppercase tracking-wider">
               ⭐ Membership
             </span>
           </div>
@@ -33,7 +33,7 @@ export default function Membership() {
                 'Opportunities to support and engage with in-house and partner projects',
               ].map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
-                  <span className="text-primary-600 font-bold text-xl mt-1">✓</span>
+                  <span className="text-secondary-600 font-bold text-xl mt-1">✓</span>
                   <span className="text-lg text-gray-700">{item}</span>
                 </li>
               ))}
@@ -57,7 +57,7 @@ export default function Membership() {
                 </li>
               ))}
             </ul>
-            <p className="text-lg font-semibold text-primary-600">
+            <p className="text-lg font-semibold text-secondary-600">
               Membership rewards come only from your level of involvement.
             </p>
           </div>

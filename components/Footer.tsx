@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-secondary-500 to-secondary-700 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">CC</span>
               </div>
               <span className="text-xl font-bold text-white">
@@ -27,17 +27,17 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="hover:text-primary-400 transition-colors">
+                <Link href="/" className="hover:text-secondary-400 transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/membership" className="hover:text-primary-400 transition-colors">
+                <Link href="/membership" className="hover:text-secondary-400 transition-colors">
                   Membership
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-primary-400 transition-colors">
+                <Link href="/about" className="hover:text-secondary-400 transition-colors">
                   About
                 </Link>
               </li>
@@ -49,17 +49,17 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Community</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/community-owned" className="hover:text-primary-400 transition-colors">
+                <Link href="/community-owned" className="hover:text-secondary-400 transition-colors">
                   Community-Owned
                 </Link>
               </li>
               <li>
-                <Link href="/initiatives" className="hover:text-primary-400 transition-colors">
+                <Link href="/initiatives" className="hover:text-secondary-400 transition-colors">
                   In-House Initiatives
                 </Link>
               </li>
               <li>
-                <Link href="/partners" className="hover:text-primary-400 transition-colors">
+                <Link href="/partners" className="hover:text-secondary-400 transition-colors">
                   Trusted Partners
                 </Link>
               </li>

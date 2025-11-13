@@ -4,7 +4,7 @@ export default function CommunityOwned() {
       <div className="container-custom">
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <span className="text-primary-600 font-semibold text-sm md:text-base uppercase tracking-wider">
+            <span className="text-secondary-600 font-semibold text-sm md:text-base uppercase tracking-wider">
               ⭐ Community-Owned
             </span>
           </div>
@@ -29,7 +29,7 @@ export default function CommunityOwned() {
                 'Rewards are based solely on involvement and contribution',
               ].map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
-                  <span className="text-primary-600 font-bold text-xl mt-1">✓</span>
+                  <span className="text-secondary-600 font-bold text-xl mt-1">✓</span>
                   <span className="text-lg text-gray-700">{item}</span>
                 </li>
               ))}
@@ -37,7 +37,7 @@ export default function CommunityOwned() {
           </div>
 
           {/* Why It Works */}
-          <div className="card bg-gradient-to-br from-primary-50 to-white">
+          <div className="card bg-gradient-to-br from-secondary-50 to-white">
             <h3 className="heading-tertiary mb-6">Why This Model Works</h3>
             <ul className="space-y-4">
               {[
@@ -47,7 +47,7 @@ export default function CommunityOwned() {
                 'Encourages long-term, genuine participation',
               ].map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
-                  <span className="text-primary-600 font-bold text-xl mt-1">→</span>
+                  <span className="text-secondary-600 font-bold text-xl mt-1">→</span>
                   <span className="text-lg text-gray-700">{item}</span>
                 </li>
               ))}
