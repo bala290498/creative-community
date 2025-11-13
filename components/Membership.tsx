@@ -69,7 +69,7 @@ export default function Membership() {
           <div className="text-center mb-12">
             <h3 className="heading-secondary mb-4">Member Benefits</h3>
             <p className="text-body text-gray-600 max-w-3xl mx-auto">
-              As a member of our community, you'll have access to a wide range of benefits designed to support your growth, learning, and meaningful contributions.
+              As a member of our community, you&apos;ll have access to a wide range of benefits designed to support your growth, learning, and meaningful contributions.
             </p>
           </div>
 
