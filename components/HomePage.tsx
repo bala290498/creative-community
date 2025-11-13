@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import TextType from './TextType'
 import Testimonials from './Testimonials'
+import { ShuffleHero } from './ui/shuffle-grid'
 
 export default function HomePage() {
   return (
@@ -313,10 +314,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 9. Testimonials */}
+      {/* 9. Shuffle Grid - Project Showcase */}
+      <section className="section-padding bg-gray-50">
+        <ShuffleHero />
+      </section>
+
+      {/* 10. Testimonials */}
       <Testimonials />
 
-      {/* 10. FAQ */}
+      {/* 11. FAQ */}
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
@@ -347,7 +353,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 11. Final Call-to-Action Section */}
+      {/* 12. Final Call-to-Action Section */}
       <section className="section-padding bg-gradient-to-br from-secondary-50 to-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
