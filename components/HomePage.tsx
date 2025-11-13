@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import TextType from './TextType'
+import Testimonials from './Testimonials'
 
 export default function HomePage() {
   return (
@@ -7,9 +9,21 @@ export default function HomePage() {
       <section className="relative pt-24 md:pt-32 pb-16 md:pb-24 bg-gradient-to-br from-secondary-50 via-white to-secondary-50">
         <div className="container-custom">
           <div className="text-center max-w-4xl mx-auto animate-fade-in">
-            <h1 className="heading-primary text-gray-900 mb-6">
-              A Community Built on{' '}
-              <span className="text-secondary-600">Purpose, Not Profit</span>
+            <h1 className="heading-primary text-gray-900 mb-6 min-h-[3.5rem] md:min-h-[4rem] flex items-center justify-center">
+              <TextType
+                text={[
+                  'A Community Built on Purpose, Not Profit',
+                  'A Community Built on Values, Not Ventures',
+                  'A Community Built on Purpose, Not Profit'
+                ]}
+                typingSpeed={75}
+                pauseDuration={1500}
+                showCursor={true}
+                cursorCharacter="|"
+                as="span"
+                className="inline-block"
+                cursorClassName="text-secondary-600"
+              />
             </h1>
             
             <p className="text-body text-gray-700 mb-8 max-w-3xl mx-auto text-lg">
@@ -300,41 +314,7 @@ export default function HomePage() {
       </section>
 
       {/* 9. Testimonials */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="heading-secondary mb-6">What Members Say</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {[
-              {
-                quote: 'Joining this community gave me a place to explore projects I genuinely care about. There\'s no pressure—just people who want to build meaningful things together.',
-                author: 'Jordan M.',
-                role: 'Member',
-              },
-              {
-                quote: 'The transparency and ethical approach here is refreshing. I can contribute when I want, how I want, without any financial strings attached.',
-                author: 'Alex K.',
-                role: 'Member',
-              },
-              {
-                quote: 'This community helped me connect with like-minded people who share my values. The collaborative spirit is genuine and inspiring.',
-                author: 'Sam T.',
-                role: 'Member',
-              },
-            ].map((testimonial, index) => (
-              <div key={index} className="card text-center">
-                <p className="text-gray-700 mb-6 italic">&quot;{testimonial.quote}&quot;</p>
-                <div>
-                  <p className="font-semibold text-gray-900">{testimonial.author}</p>
-                  <p className="text-sm text-gray-600">{testimonial.role}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Testimonials />
 
       {/* 10. FAQ */}
       <section className="section-padding bg-white">
