@@ -10,16 +10,8 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          50: '#ffffff',
-          100: '#fefefe',
-          200: '#fdfdfd',
-          300: '#fcfcfc',
-          400: '#fafafa',
-          500: '#ffffff',
-          600: '#f5f5f5',
-          700: '#e5e5e5',
-          800: '#d4d4d4',
-          900: '#a3a3a3',
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))',
         },
         secondary: {
           50: '#f0f9f0',
@@ -32,10 +24,6 @@ const config: Config = {
           700: '#33652f',
           800: '#2b5128',
           900: '#244322',
-        },
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
         },
         muted: {
           DEFAULT: 'hsl(var(--muted))',
