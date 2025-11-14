@@ -44,9 +44,9 @@ export function FaqAccordion({
 
 
   return (
-    <div className={cn("p-4 flex flex-col items-center", className)}>
+    <div className={cn("w-full", className)}>
       {timestamp && (
-        <div className="mb-4 text-sm text-muted-foreground text-center">{timestamp}</div>
+        <div className="mb-4 text-sm text-muted-foreground">{timestamp}</div>
       )}
 
 
@@ -56,32 +56,32 @@ export function FaqAccordion({
         collapsible
         value={openItem || ""}
         onValueChange={(value) => setOpenItem(value)}
-        className="w-full max-w-2xl"
+        className="w-full"
       >
         {data.map((item) => (
           <Accordion.Item 
             value={item.id.toString()} 
             key={item.id} 
-            className="mb-2"
+            className="mb-2 w-full"
           >
             <Accordion.Header>
-              <Accordion.Trigger className="flex w-full items-center justify-between gap-x-4">
+              <Accordion.Trigger className="flex w-full items-center justify-start gap-x-4">
                 <div
                   className={cn(
-                    "relative flex items-center space-x-2 rounded-xl p-2 transition-colors flex-1",
+                    "relative flex items-center space-x-2 rounded-xl p-2 transition-colors",
                     openItem === item.id.toString() 
-                      ? "text-primary" 
+                      ? "text-blue-500" 
                       : "bg-muted",
                     questionClassName
                   )}
                   style={
                     openItem === item.id.toString() 
-                      ? { backgroundColor: "hsl(var(--primary) / 0.2)" }
+                      ? { backgroundColor: "rgba(59, 130, 246, 0.2)" }
                       : {}
                   }
                   onMouseEnter={(e) => {
                     if (openItem !== item.id.toString()) {
-                      e.currentTarget.style.backgroundColor = "hsl(var(--primary) / 0.1)";
+                      e.currentTarget.style.backgroundColor = "rgba(59, 130, 246, 0.1)";
                     }
                   }}
                   onMouseLeave={(e) => {
@@ -113,7 +113,7 @@ export function FaqAccordion({
                 <span 
                   className={cn(
                     "text-muted-foreground",
-                    openItem === item.id.toString() && "text-primary"
+                    openItem === item.id.toString() && "text-blue-500"
                   )}
                 >
                   {openItem === item.id.toString() ? (
@@ -135,10 +135,10 @@ export function FaqAccordion({
                 transition={{ duration: 0.4 }}
                 className="overflow-hidden"
               >
-                <div className="flex justify-center mt-1">
+                <div className="ml-7 mt-1 md:ml-16">
                   <div
                     className={cn(
-                      "relative max-w-md rounded-2xl bg-primary px-4 py-2 text-primary-foreground text-center",
+                      "relative max-w-xs rounded-2xl bg-primary px-4 py-2 text-primary-foreground",
                       answerClassName
                     )}
                   >
