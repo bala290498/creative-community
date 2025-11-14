@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --border: 214.3 31.8% 91.4%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+  }
+  
   html {
     scroll-behavior: smooth;
   }
@@ -48,6 +55,18 @@
   .card {
     @apply bg-white rounded-xl shadow-lg p-6 md:p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300;
   }
+  
+  .bg-card {
+    background-color: hsl(var(--card));
+  }
+  
+  .text-card-foreground {
+    color: hsl(var(--card-foreground));
+  }
+  
+  .text-muted-foreground {
+    color: hsl(var(--muted-foreground));
+  }
 }
 
 @layer utilities {
@@ -64,7 +83,15 @@
   }
   
   .animate-pulse-emoji {
-    animation: pulse-emoji 1.5s ease-in-out infinite;
+    animation: pulse-emoji 2s ease-in-out infinite;
+  }
+  
+  .animate-emoji-wiggle {
+    animation: emoji-wiggle 1.5s ease-in-out infinite;
+  }
+  
+  .animate-emoji-breathe {
+    animation: emoji-breathe 2.5s ease-in-out infinite;
   }
 }
 
@@ -99,10 +126,42 @@
 
 @keyframes pulse-emoji {
   0%, 100% {
-    transform: scale(1);
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.15) rotate(-5deg);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.2) rotate(0deg);
+  }
+  75% {
+    transform: scale(1.15) rotate(5deg);
+  }
+}
+
+@keyframes emoji-wiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+
+@keyframes emoji-breathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.9;
   }
 }
 

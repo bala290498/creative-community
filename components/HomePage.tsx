@@ -4,6 +4,8 @@ import Testimonials from './Testimonials'
 import { ShuffleHero } from './ui/shuffle-grid'
 import FAQ from './FAQ'
 import { Search, Handshake, Sparkles, FileText, Check } from 'lucide-react'
+import { WarpBackground } from './ui/warp-background'
+import { Card, CardContent, CardDescription, CardTitle } from './ui/card'
 
 export default function HomePage() {
   return (
@@ -79,23 +81,61 @@ export default function HomePage() {
             ].map((item, index) => {
               const IconComponent = item.icon
               return (
-                <div key={index} className="card text-center">
+              <div key={index} className="card text-center">
                   <div className="flex justify-center mb-4">
                     <div className="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center">
                       <IconComponent className="w-8 h-8 text-secondary-600" />
                     </div>
                   </div>
-                  <h3 className="heading-tertiary mb-4">{item.title}</h3>
-                  <p className="text-gray-700">{item.description}</p>
-                </div>
+                <h3 className="heading-tertiary mb-4">{item.title}</h3>
+                <p className="text-gray-700">{item.description}</p>
+              </div>
               )
             })}
           </div>
         </div>
       </section>
 
-      {/* 3. How It Works */}
+      {/* 3. Warp Background Section */}
       <section className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="heading-secondary mb-6">Why Join Our Community?</h2>
+            <p className="text-body text-gray-700 max-w-3xl mx-auto">
+              Experience a community that values your contribution and supports your growth.
+            </p>
+          </div>
+          
+          <div className="flex justify-center">
+            <WarpBackground 
+              className="border-gray-200 bg-white max-w-2xl w-full"
+              gridColor="hsl(214.3 31.8% 91.4%)"
+              perspective={200}
+              beamsPerSide={4}
+              beamSize={4}
+            >
+              <Card className="w-full border-0 shadow-none bg-transparent relative z-10">
+                <CardContent className="flex flex-col gap-4 p-8">
+                  <CardTitle className="text-3xl font-bold text-gray-900">
+                    Join a Community That Matters
+                  </CardTitle>
+                  <CardDescription className="text-base text-gray-700 leading-relaxed">
+                    Your hard work and dedication deserve recognition. We&apos;re thrilled to have you join a community where meaningful contributions are valued. Together, we build projects that make a real difference.
+                  </CardDescription>
+                  <div className="mt-4">
+                    <Link href="/membership" className="btn-primary">
+                      Get Started Today
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+            </WarpBackground>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. How It Works */}
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="heading-secondary mb-6">How the Community Works</h2>
@@ -146,8 +186,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. Featured Projects Section */}
-      <section className="section-padding bg-white">
+      {/* 5. Featured Projects Section */}
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="heading-secondary mb-6">Featured Community Projects</h2>
@@ -200,8 +240,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. Why Join the Community? */}
-      <section className="section-padding bg-gray-50">
+      {/* 6. Why Join the Community? */}
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -228,8 +268,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. Project Categories Overview */}
-      <section className="section-padding bg-white">
+      {/* 7. Project Categories Overview */}
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="heading-secondary mb-6">Explore Project Categories</h2>
@@ -294,7 +334,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. Call-to-Action Banner (Mid-Page) */}
+      {/* 8. Call-to-Action Banner (Mid-Page) */}
       <section className="section-padding bg-gradient-to-br from-secondary-500 to-secondary-700">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
@@ -311,7 +351,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 8. About the Community Preview */}
+      {/* 9. About the Community Preview */}
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
@@ -326,18 +366,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 9. Shuffle Grid - Project Showcase */}
+      {/* 10. Shuffle Grid - Project Showcase */}
       <section className="section-padding bg-gray-50">
         <ShuffleHero />
       </section>
 
-      {/* 10. Testimonials */}
+      {/* 11. Testimonials */}
       <Testimonials />
 
-      {/* 11. FAQ */}
+      {/* 12. FAQ */}
       <FAQ />
 
-      {/* 12. Final Call-to-Action Section */}
+      {/* 13. Final Call-to-Action Section */}
       <section className="section-padding bg-gradient-to-br from-secondary-50 to-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">

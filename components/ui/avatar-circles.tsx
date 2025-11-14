@@ -26,7 +26,13 @@ const AvatarCircles = ({
           className="relative h-10 w-10 md:h-12 md:w-12 rounded-full border-2 border-white dark:border-gray-800 overflow-hidden bg-white hover:scale-110 transition-transform duration-300 flex items-center justify-center"
         >
           {emojis ? (
-            <span className="text-2xl md:text-3xl animate-pulse-emoji" style={{ animationDelay: `${index * 0.15}s` }}>
+            <span 
+              className="text-2xl md:text-3xl inline-block" 
+              style={{ 
+                animation: `emoji-breathe 2.5s ease-in-out infinite, emoji-wiggle ${1.5 + index * 0.1}s ease-in-out infinite`,
+                animationDelay: `${index * 0.2}s, ${index * 0.3}s`
+              }}
+            >
               {item}
             </span>
           ) : (
