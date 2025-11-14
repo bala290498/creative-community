@@ -44,9 +44,9 @@ export function FaqAccordion({
 
 
   return (
-    <div className={cn("p-4", className)}>
+    <div className={cn("p-4 flex flex-col items-center", className)}>
       {timestamp && (
-        <div className="mb-4 text-sm text-muted-foreground">{timestamp}</div>
+        <div className="mb-4 text-sm text-muted-foreground text-center">{timestamp}</div>
       )}
 
 
@@ -56,6 +56,7 @@ export function FaqAccordion({
         collapsible
         value={openItem || ""}
         onValueChange={(value) => setOpenItem(value)}
+        className="w-full max-w-2xl"
       >
         {data.map((item) => (
           <Accordion.Item 
@@ -64,10 +65,10 @@ export function FaqAccordion({
             className="mb-2"
           >
             <Accordion.Header>
-              <Accordion.Trigger className="flex w-full items-center justify-start gap-x-4">
+              <Accordion.Trigger className="flex w-full items-center justify-between gap-x-4">
                 <div
                   className={cn(
-                    "relative flex items-center space-x-2 rounded-xl p-2 transition-colors",
+                    "relative flex items-center space-x-2 rounded-xl p-2 transition-colors flex-1",
                     openItem === item.id.toString() 
                       ? "text-primary" 
                       : "bg-muted",
@@ -134,10 +135,10 @@ export function FaqAccordion({
                 transition={{ duration: 0.4 }}
                 className="overflow-hidden"
               >
-                <div className="ml-7 mt-1 md:ml-16">
+                <div className="flex justify-center mt-1">
                   <div
                     className={cn(
-                      "relative max-w-xs rounded-2xl bg-primary px-4 py-2 text-primary-foreground",
+                      "relative max-w-md rounded-2xl bg-primary px-4 py-2 text-primary-foreground text-center",
                       answerClassName
                     )}
                   >
