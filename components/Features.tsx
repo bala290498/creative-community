@@ -76,10 +76,7 @@ export function Features({
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="text-secondary-600 font-semibold text-sm uppercase tracking-wider">
-            Community Features
-          </span>
-          <h2 className="heading-secondary mt-4 mb-6">
+          <h2 className="heading-secondary mb-6">
             Explore What We Offer
           </h2>
         </div>
