@@ -8,15 +8,13 @@ interface ScrollVelocityContainerProps {
   className?: string
 }
 
-const ScrollVelocityContainer = ({ children, className }: ScrollVelocityContainerProps) => {
+export function ScrollVelocityContainer({ children, className }: ScrollVelocityContainerProps) {
   return (
     <div className={`${className} w-full max-w-none`}>
       {children}
     </div>
   )
 }
-
-export { ScrollVelocityContainer }
 
 interface ScrollVelocityRowProps {
   children: React.ReactNode
@@ -25,12 +23,12 @@ interface ScrollVelocityRowProps {
   className?: string
 }
 
-const ScrollVelocityRow = ({ 
+export function ScrollVelocityRow({ 
   children, 
   baseVelocity = 5, 
   direction = 1,
   className 
-}: ScrollVelocityRowProps) => {
+}: ScrollVelocityRowProps) {
   const baseX = useMotionValue(0)
   const scrollVelocity = useRef(0)
   const lastScrollTime = useRef(performance.now())
@@ -191,5 +189,3 @@ const ScrollVelocityRow = ({
     </div>
   )
 }
-
-export { ScrollVelocityRow }

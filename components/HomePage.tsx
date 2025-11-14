@@ -12,6 +12,7 @@ import {
   ScrollVelocityRow,
 } from './ui/scroll-based-velocity'
 import { Timeline } from './Timeline'
+import { Features } from './Features'
 
 export default function HomePage() {
   return (
@@ -372,7 +373,7 @@ export default function HomePage() {
           <div className="text-center mb-12">
             <h2 className="heading-secondary mb-6">Network, Learn, Build, Grow.</h2>
             <p className="text-body text-gray-700 max-w-4xl mx-auto">
-              Connect with people who share your creative energy. Explore community-led learning across sales (sales: activities involving value exchange), marketing (marketing: promotion and customer engagement), creativity, problem-solving, and more. Join member-driven projects, collaborate openly, and discover meaningful opportunities to grow together.
+              Connect with like-minded people, share ideas, learn new skills, and collaborate on member-driven projects. Explore community-led sessions, contribute to creative initiatives, and grow through meaningful, hands-on experiences.
             </p>
           </div>
 
@@ -618,6 +619,35 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
+      </section>
+
+      {/* 9.5. Features Section */}
+      <section className="section-padding bg-gray-50">
+        <Features
+          features={[
+            {
+              id: 1,
+              iconName: 'Users',
+              title: 'Connect with Creators',
+              description: 'Join a network of like-minded individuals who share your passion for meaningful work and creative collaboration.',
+              image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop',
+            },
+            {
+              id: 2,
+              iconName: 'BookOpen',
+              title: 'Learn Together',
+              description: 'Participate in community-led learning sessions covering sales, marketing, creativity, and problem-solving skills.',
+              image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop',
+            },
+            {
+              id: 3,
+              iconName: 'Lightbulb',
+              title: 'Share Ideas',
+              description: 'Contribute your ideas to community-owned projects and see them come to life through collaborative effort.',
+              image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop',
+            },
+          ]}
+        />
       </section>
 
       {/* 10. Shuffle Grid - Project Showcase */}
