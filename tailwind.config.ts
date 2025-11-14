@@ -33,6 +33,14 @@ const config: Config = {
           800: '#2b5128',
           900: '#244322',
         },
+        primary: {
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))',
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
+        },
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

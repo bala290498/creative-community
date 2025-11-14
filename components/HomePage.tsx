@@ -2,7 +2,7 @@ import Link from 'next/link'
 import TextType from './TextType'
 import Testimonials from './Testimonials'
 import { ShuffleHero } from './ui/shuffle-grid'
-import FAQ from './FAQ'
+import { FaqAccordion } from './ui/faq-accordion'
 import { Search, Handshake, Sparkles, FileText, Check } from 'lucide-react'
 import { WarpBackground } from './ui/warp-background'
 import { Card, CardContent, CardDescription, CardTitle } from './ui/card'
@@ -375,7 +375,38 @@ export default function HomePage() {
       <Testimonials />
 
       {/* 12. FAQ */}
-      <FAQ />
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="heading-secondary mb-6">Frequently Asked Questions</h2>
+          </div>
+          
+          <div className="max-w-3xl mx-auto">
+            <FaqAccordion
+              data={[
+                {
+                  id: 1,
+                  question: 'Do I need to pay anything to join?',
+                  answer: 'No. Membership is completely free. We do not charge fees or require financial commitments.',
+                },
+                {
+                  id: 2,
+                  question: 'What types of projects can I contribute to?',
+                  answer: 'You can participate in community-owned initiatives, member-led in-house projects, or collaborations with trusted partners.',
+                },
+                {
+                  id: 3,
+                  question: 'How do I know if this community is right for me?',
+                  answer: 'If you value ethical collaboration, transparency, and meaningful work without financial pressure, you\'ll feel at home here.',
+                },
+              ]}
+              timestamp=""
+              questionClassName="text-gray-800"
+              answerClassName="bg-secondary-500 text-white"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* 13. Final Call-to-Action Section */}
       <section className="section-padding bg-gradient-to-br from-secondary-50 to-white">
