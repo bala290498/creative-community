@@ -58,6 +58,14 @@
   .animate-shimmer {
     animation: shimmer 2s ease-in-out infinite;
   }
+  
+  .animate-bounce-slow {
+    animation: bounce-slow 2s ease-in-out infinite;
+  }
+  
+  .animate-pulse-emoji {
+    animation: pulse-emoji 1.5s ease-in-out infinite;
+  }
 }
 
 @keyframes pulse-slow {
@@ -77,6 +85,24 @@
   }
   100% {
     transform: translateX(100%) translateY(100%);
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulse-emoji {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
   }
 }
 

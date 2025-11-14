@@ -2,17 +2,11 @@ import Link from 'next/link'
 import { Sprout, Lightbulb, Handshake, Check, ArrowRight } from 'lucide-react'
 import { AvatarCircles } from '@/components/ui/avatar-circles'
 
-// 3D Avatar pack - using Ready Player Me style 3D avatars
-// Generating diverse 3D avatars with Indian names
-const indianNames = [
-  "Priya", "Arjun", "Kavya", "Rohan", "Ananya",
-  "Vikram", "Meera", "Aditya", "Sneha", "Rahul"
+// Animated face emojis for avatar circles
+const animatedEmojis = [
+  "😊", "😄", "😃", "😁", "🙂",
+  "😉", "😍", "🤗", "😎", "🥰"
 ]
-
-// Using Multiavatar for 3D-style avatars (provides 3D-looking avatar images)
-const avatarUrls = indianNames.map((name) => 
-  `https://api.multiavatar.com/${encodeURIComponent(name)}.png?apikey=`
-)
 
 export default function Community() {
   return (
@@ -37,7 +31,7 @@ export default function Community() {
 
             {/* Avatar Circles */}
             <div className="flex flex-col items-center gap-4 mb-8">
-              <AvatarCircles numPeople={99} avatarUrls={avatarUrls} />
+              <AvatarCircles numPeople={99} emojis={animatedEmojis} />
               <p className="text-sm md:text-base text-gray-600 font-medium">
                 Join <span className="text-secondary-600 font-semibold">99+</span> active members building meaningful projects together
               </p>
